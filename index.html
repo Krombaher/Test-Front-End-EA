@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="left__vector">
+        <img src="img/vector-left.png" alt="bg-img">
+    </div>
+
+    <div class="left__vector-mobile left__vector">
+        <img src="img/Vector%20(5).png" alt="bg-img">
+    </div>
+
+    <div class="right__vector">
+        <img src="img/vector-right.png" alt="bg-img">
+    </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="title__section">
+            <h1>Under Construction</h1>
+            <span class="text__size">We're making lots of improvements and will be back soon</span>
+        </div>
+        <div class="timer__section">
+            <div class="timer">
+                <div class="timer__items">
+                    <span class="time" id="days">92</span>
+                    <div class="timer__text">
+                        <img src="img/timer-bg.png" alt="bg">
+                        <span class="text">Days</span>
+                    </div>
+                    <div class="timer__text-mobile">
+                        <img src="img/timer-bg-768.png" alt="bg">
+                        <span class="text">DD</span>
+                    </div>
+                </div>
+                <div class="divider time">:</div>
+                <div class="timer__items">
+                    <span class="time" id="hours">20</span>
+                    <div class="timer__text">
+                        <img src="img/timer-bg.png" alt="bg">
+                        <span class="text">Hours</span>
+                    </div>
+                    <div class="timer__text-mobile">
+                        <img src="img/timer-bg-768.png" alt="bg">
+                        <span class="text">HH</span>
+                    </div>
+                </div>
+                <div class="divider time">:</div>
+                <div class="timer__items">
+                    <span class="time" id="minutes">56</span>
+                    <div class="timer__text">
+                        <img src="img/timer-bg.png" alt="bg">
+                        <span class="text">Minutes</span>
+                    </div>
+                    <div class="timer__text-mobile">
+                        <img src="img/timer-bg-768.png" alt="bg">
+                        <span class="text">MM</span>
+                    </div>
+                </div>
+                <div class="divider time">:</div>
+                <div class="timer__items">
+                    <span class="time" id="seconds">20</span>
+                    <div class="timer__text">
+                        <img src="img/timer-bg.png" alt="bg">
+                        <span class="text">Seconds</span>
+                    </div>
+                    <div class="timer__text-mobile">
+                        <img src="img/timer-bg-768.png" alt="bg">
+                        <span class="text">SS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="event__section">
+            <div class="event__container">
+                <span class="text__size">Check our event page when you wait:</span>
+                <div class="event__link">
+                    <a href="https://learn.javascript.ru/">Go to the event</a>
+                    <img src="img/arrow-right.png" alt="link-arrow">
+                </div>
+            </div>
+        </div>
+        <div id="modal" class="modal hide">
+            <div class="modal__content ">
+                <div data-close class="modal__close">&times;</div>
+                <div class="modal__title">SUCCESS!</div>
+                <div class="modal__description">You have successfully subscribed to the email newsletter!</div>
+                <button data-close class="modal__btn">Close</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <form id="form" class="form">
+            <div class="form__container">
+                <input class="form__input" id="email" type="email" name="email"
+                       placeholder="Enter your Email and get notified">
+                <small></small>
+                <button><img src="img/arrow-right.png" alt="link-arrow"></button>
+            </div>
+        </form>
+    </footer>
+</div>
+
+<script src="./js/js.js"></script>
+</body>
