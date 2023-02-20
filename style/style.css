@@ -28,36 +28,39 @@ main {
     flex: 1 1 auto;
 }
 
-@keyframes showLogo {
-    from {
-        opacity: 0;
-        top: 0;
-    }
+@keyframes showItems {
     to {
         opacity: 1;
-        top: 60px;
+        transform: translateY(0px);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
     }
 }
 
 @keyframes showLeftVector {
-    from {
-        opacity: 0;
-        left: -320px;
-    }
     to {
         opacity: 1;
-        left: 0;
+        transform: translatex(0px);
+    }
+
+    from {
+        opacity: 0;
+        transform: translatex(-100px);
     }
 }
 
 @keyframes showRightVector {
-    from {
-        opacity: 0;
-        right: -320px;
-    }
     to {
         opacity: 1;
-        right: 0;
+        transform: translatex(0px);
+    }
+
+    from {
+        opacity: 0;
+        transform: translatex(100px);
     }
 }
 
@@ -93,9 +96,7 @@ main {
     padding-top: 127px;
 }
 .logo {
-    animation: showLogo 1s;
-    position: absolute;
-    top: 60px;
+    animation: showItems 0.5s;
 }
 
 .title__section {
@@ -105,6 +106,7 @@ main {
     align-items: center;
     text-align: center;
     margin-top: 99px;
+    animation: showItems 1.5s;
 }
 
 .title__section h1 {
@@ -127,6 +129,7 @@ main {
 .timer__section {
     display: flex;
     justify-content: center;
+    animation: showItems 2.5s;
 }
 
 .timer {
@@ -182,6 +185,7 @@ main {
     display: flex;
     justify-content: center;
     margin-bottom: 74px;
+    animation: showItems 3.5s;
 }
 
 .event__container {
