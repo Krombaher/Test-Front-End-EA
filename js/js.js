@@ -6,12 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email');
         const modalTitle = document.querySelector('.modal__title');
         const modalDescription = document.querySelector('.modal__description');
+        const errorMessage = document.getElementById('small')
+        let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/
+
 
         form.addEventListener('submit', formSubmit);
 
         function formSubmit(e) {
             e.preventDefault();
-            let error = formValidate();
+            let error = formValidate()
 
             if (error === 0) {
                 formSend()
@@ -47,34 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
 // Validate Form
         function formValidate() {
             let isError = 0
-            const emailValue = email.value.trim()
 
-            if (emailValue === '') {
-                isError++;
-            } else if (!emailTest(emailValue)) {
-                isError++;
-                setErrorFor(email, 'Email not valid...')
+            if (email.value.match(pattern)) {
+                errorMessage.style.display = 'none'
+                email.style.border = '1px solid rgba(0, 0, 0, 0.8)'
             } else {
-                setSuccessFor(email)
+                email.style.border = '3px solid #DF2224'
+                errorMessage.style.display = 'block'
+                isError++
             }
-
             return isError
-        }
-
-        function setErrorFor(input, message) {
-            const formItem = input.parentElement;
-            const small = formItem.querySelector('small');
-            small.innerText = message;
-            formItem.className = 'form__container error';
-        }
-
-        function setSuccessFor(input) {
-            const formItem = input.parentElement;
-            formItem.className = 'form__container';
-        }
-
-        function emailTest(email) {
-            return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(email);
         }
 
 //Modal
