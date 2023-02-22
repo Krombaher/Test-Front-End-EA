@@ -11,15 +11,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function formSubmit(e) {
             e.preventDefault();
-            let error = formValidate(form);
+            let error = formValidate();
 
             if (error === 0) {
                 formSend()
                 openModal('SUCCESS!', 'You have successfully subscribed to the email newsletter!')
                 email.value = ''
-                email.classList.remove('error')
             } else {
-                email.classList.add('error')
                 openModal('ERROR!', 'Email not sent, please check your details')
             }
         }
@@ -43,20 +41,40 @@ document.addEventListener('DOMContentLoaded', function () {
                 })
                 .catch(res => {
                     console.error(res)
-                    openModal('ERROR!', 'Email not sent, please check your details')
                 });
         }
 
 // Validate Form
         function formValidate() {
             let isError = 0
-
             const emailValue = email.value.trim()
+
             if (emailValue === '') {
-                isError++
+                isError++;
+            } else if (!emailTest(emailValue)) {
+                isError++;
+                setErrorFor(email, 'Email not valid...')
             } else {
-                return isError
+                setSuccessFor(email)
             }
+
+            return isError
+        }
+
+        function setErrorFor(input, message) {
+            const formItem = input.parentElement;
+            const small = formItem.querySelector('small');
+            small.innerText = message;
+            formItem.className = 'form__container error';
+        }
+
+        function setSuccessFor(input) {
+            const formItem = input.parentElement;
+            formItem.className = 'form__container';
+        }
+
+        function emailTest(email) {
+            return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(email);
         }
 
 //Modal
@@ -102,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     })
 
                     tabsInfo.forEach((item, iInfo) => {
-                        if(i === iInfo) {
+                        if (i === iInfo) {
                             item.classList.add('showInfo')
                         } else {
                             item.classList.remove('showInfo')

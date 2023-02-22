@@ -285,6 +285,23 @@ body {
     position: relative;
 }
 
+.form__container small {
+    visibility: hidden;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form__container.error small {
+    visibility: visible;
+}
+
+.form__container.error input {
+    color: #DF2224;
+}
+
 .form__input {
     font-family: 'Roboto', sans-serif;
     width: 440px;
@@ -298,6 +315,7 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 150%;
+
 }
 
 .form__container button {
@@ -398,7 +416,6 @@ body {
 }
 
 .error {
-    border: 2px solid #DF2224;
     color: #DF2224;
 }
 
