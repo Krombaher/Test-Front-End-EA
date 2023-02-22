@@ -19,6 +19,7 @@ button {
 
 body {
     font-family: 'Poppins', sans-serif;
+    position: relative;
     /*height: 100%;*/
     /*animation: hideScroll 7s;*/
 }
@@ -81,9 +82,13 @@ main {
 .wrapper {
     min-height: 100%;
     background: #F5F5F5;
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 }
 
 .left__vector {
@@ -548,6 +553,23 @@ main {
     }
 }
 
+@media (max-width: 1100px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 62px 0 0 0;
+    }
+
+    .footer__link {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 15px 0 40px 0;
+    }
+}
+
 @media (max-width: 900px) {
 
     .text__size {
@@ -635,11 +657,6 @@ main {
         height: 33px;
         top: 6px;
     }
-
-    .footer__link {
-        top: 122px;
-        right: 290px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -654,6 +671,7 @@ main {
 
     .tabs {
         flex-direction: column;
+        margin: 0 10px;
     }
 
     .tabs__content {
@@ -726,13 +744,12 @@ main {
         padding-top: 59px;
     }
 
-    .tabs__item {
-        width: 320px;
+    .footer__link {
+        margin: 15px 0 30px 0;
     }
 
-    .footer__link {
-        top: 70%;
-        right: 27%;
+    .tabs__item {
+        width: 320px;
     }
 
     .tabs__info {
