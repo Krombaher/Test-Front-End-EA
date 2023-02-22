@@ -111,48 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     currentBtn.classList.add('active-tab')
                     currentTab.classList.add('contentActive')
-
                 }
             })
         })
-
-
-
-
-//         const tabsBtn = document.querySelectorAll('.tabs__btn'),
-//             tabsContent = document.querySelectorAll('.tabs__content'),
-//             tabsParent = document.querySelector('.tabs')
-//
-//         function hideTabContent() {
-//             tabsContent.forEach(item => {
-//                 item.style.display = 'none'
-//             })
-//
-//             tabsBtn.forEach(item => {
-//                 item.classList.remove('active-tab')
-//             })
-//         }
-//
-//         function showTabContent(i = 0) {
-//             tabsContent[i].style.display = 'flex'
-//             tabsBtn[i].classList.add('active-tab')
-//         }
-//
-//         hideTabContent()
-//         showTabContent()
-//
-//         tabsParent.addEventListener('click', e => {
-//             const target = e.target
-//
-//             if(target && target.classList.contains('tabs__btn')) {
-//                 tabsBtn.forEach((item, i) => {
-//                     if (target === item) {
-//                         hideTabContent()
-//                         showTabContent(i)
-//                     }
-//                 })
-//             }
-//         })
 
 // Timer
         const deadline = '2023-05-31';
