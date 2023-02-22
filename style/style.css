@@ -20,12 +20,7 @@ button {
 body {
     font-family: 'Poppins', sans-serif;
     position: relative;
-    /*height: 100%;*/
-    /*animation: hideScroll 7s;*/
-}
-
-main {
-    /*flex: 1 1 auto;*/
+    animation: hideScroll 7s;
 }
 
 @font-face {
