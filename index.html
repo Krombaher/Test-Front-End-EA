@@ -10,7 +10,6 @@
 </head>
 <body>
 <div class="wrapper">
-
     <div class="left__vector">
         <img src="img/vector-left.png" alt="bg-img">
     </div>
@@ -22,7 +21,6 @@
     <div class="right__vector">
         <img src="img/vector-right.png" alt="bg-img">
     </div>
-
     <header class="header">
         <div class="logo">
             <a href="https://krombaher.github.io/Test-Front-End-EA/">
@@ -87,12 +85,10 @@
             </div>
         </div>
         <div class="event__section">
-            <div class="event__container">
-                <span class="text__size">Check our event page when you wait:</span>
-                <div class="event__link">
-                    <a href="https://learn.javascript.ru/">Go to the event</a>
-                    <img src="img/arrow-right.png" alt="link-arrow">
-                </div>
+            <span class="text__size">Check our event page when you wait:</span>
+            <div class="event__link">
+                <a href="https://learn.javascript.ru/">Go to the event</a>
+                <img src="img/arrow-right.png" alt="link-arrow">
             </div>
         </div>
         <div id="modal" class="modal hide">
@@ -114,11 +110,149 @@
             </div>
         </form>
         <div class="footer__link">
-            <a>Other Events</a>
+            <a href="#eventsTabs">Go to event</a>
             <img src="img/arrow-right.png" alt="link-arrow">
         </div>
-    </footer>
-</div>
 
+    </footer>
+
+    <div id="eventsTabs" class="events__tabs">
+        <h1>All events</h1>
+        <div class="tabs">
+
+            <div class="tabs__item">
+                <div id="tab_1" class="tabs__content contentActive">
+                    <button data-tab="#tab_1" class="tabs__btn active-tab">
+                        <span>Hawaiian party</span>
+                        <text>01</text>
+                    </button>
+                    <div data-tab="#tab_1" class="tabs__info showInfo">
+                        <div class="number__page">01</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs__item">
+                <div id="tab_2" class="tabs__content">
+                    <button data-tab="#tab_2" class="tabs__btn">
+                        <span>Hawaiian party</span>
+                        <text>02</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">02</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs__item">
+                <div id="tab_3" class="tabs__content">
+                    <button data-tab="#tab_3" class="tabs__btn">
+                        <span>Hawaiian party</span>
+                        <text>03</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">03</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__item">
+                <div id="tab_4" class="tabs__content">
+                    <button data-tab="#tab_4" class="tabs__btn">
+                        <span>Party on the beach</span>
+                        <text>04</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">04</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__item">
+                <div id="tab_5" class="tabs__content">
+                    <button data-tab="#tab_5" class="tabs__btn">
+                        <span>Home Security</span>
+                        <text>05</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">05</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__item">
+                <div id="tab_6" class="tabs__content">
+                    <button data-tab="#tab_6" class="tabs__btn">
+                        <span>Network Design & Implementation</span>
+                        <text>06</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">06</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs__item">
+                <div id="tab_7" class="tabs__content">
+                    <div data-tab="#tab_7" class="tabs__btn">
+                        <span>System Design & Engineering</span>
+                        <text>07</text>
+                    </div>
+                    <div class="tabs__info">
+                        <div class="number__page">07</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tabs__item">
+                <div id="tab_8" class="tabs__content">
+                    <button data-tab="#tab_8" class="tabs__btn">
+                        <span>Client Care Plans</span>
+                        <text>08</text>
+                    </button>
+                    <div class="tabs__info">
+                        <div class="number__page">08</div>
+                        <div class="tabs__info-title">Hawaiian party</div>
+                        <div class="tabs__info-date">13.02.2023</div>
+                        <div class="tabs__info-link">
+                            <a href="">More information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="./js/js.js"></script>
 </body>

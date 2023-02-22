@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return isError
             }
         }
+
 //Modal
         const modal = document.getElementById('modal')
         const closeBtnModal = document.querySelectorAll('[data-close]')
@@ -78,6 +79,80 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.classList.add('hide');
             modal.classList.remove('show');
         }
+
+//Tabs
+        const tabsBtn = document.querySelectorAll('.tabs__btn'),
+            tabsContent = document.querySelectorAll('.tabs__content'),
+            tabsInfo = document.querySelectorAll('.tabs__info')
+
+
+        tabsBtn.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                let currentBtn = item
+                let tabId = currentBtn.getAttribute("data-tab")
+                let currentTab = document.querySelector(tabId)
+
+                if (!currentBtn.classList.contains('active-tab')) {
+                    tabsBtn.forEach((item) => {
+                        item.classList.remove('active-tab')
+                    })
+
+                    tabsContent.forEach((item) => {
+                        item.classList.remove('contentActive')
+                    })
+
+                    tabsInfo.forEach((item, iInfo) => {
+                        if(i === iInfo) {
+                            item.classList.add('showInfo')
+                        } else {
+                            item.classList.remove('showInfo')
+                        }
+                    })
+
+                    currentBtn.classList.add('active-tab')
+                    currentTab.classList.add('contentActive')
+
+                }
+            })
+        })
+
+
+
+
+//         const tabsBtn = document.querySelectorAll('.tabs__btn'),
+//             tabsContent = document.querySelectorAll('.tabs__content'),
+//             tabsParent = document.querySelector('.tabs')
+//
+//         function hideTabContent() {
+//             tabsContent.forEach(item => {
+//                 item.style.display = 'none'
+//             })
+//
+//             tabsBtn.forEach(item => {
+//                 item.classList.remove('active-tab')
+//             })
+//         }
+//
+//         function showTabContent(i = 0) {
+//             tabsContent[i].style.display = 'flex'
+//             tabsBtn[i].classList.add('active-tab')
+//         }
+//
+//         hideTabContent()
+//         showTabContent()
+//
+//         tabsParent.addEventListener('click', e => {
+//             const target = e.target
+//
+//             if(target && target.classList.contains('tabs__btn')) {
+//                 tabsBtn.forEach((item, i) => {
+//                     if (target === item) {
+//                         hideTabContent()
+//                         showTabContent(i)
+//                     }
+//                 })
+//             }
+//         })
 
 // Timer
         const deadline = '2023-05-31';
