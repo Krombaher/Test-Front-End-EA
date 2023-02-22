@@ -439,6 +439,7 @@ body {
     outline: none;
     background: linear-gradient(180deg, rgba(22, 44, 78, 0) 0%, #162C4E 100%);
     z-index: 12;
+    text-align: left;
 }
 
 .tabs__btn span {
@@ -673,6 +674,7 @@ body {
         width: 100%;
         height: 85px;
         flex-direction: column-reverse;
+        background: url('../img/event-mobile.png') top center;
     }
 
     .tabs__item {
@@ -743,6 +745,15 @@ body {
         margin: 15px 0 30px 0;
     }
 
+    .tabs__content {
+        height: 60px;
+    }
+
+    .contentActive {
+        width: 100%;
+        height: 450px;
+    }
+
     .tabs__item {
         width: 320px;
     }
@@ -787,7 +798,7 @@ body {
     }
 
     .tabs__btn {
-        height: 64px;
+        height: 60px;
     }
 
     .left__vector img {
